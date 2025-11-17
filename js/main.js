@@ -114,32 +114,6 @@ document.getElementById('downloadCv').addEventListener('click', function() {
     document.body.removeChild(link);
 });
         
-        // Fallback message
-        setTimeout(() => {
-            if (!document.querySelector('.download-message')) {
-                const message = document.createElement('div');
-                message.className = 'download-message';
-                message.style.cssText = `
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    background: #4BB543;
-                    color: white;
-                    padding: 15px 25px;
-                    border-radius: 5px;
-                    z-index: 10000;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                `;
-                message.textContent = '📄 If download doesn\'t start, check your downloads folder!';
-                document.body.appendChild(message);
-                
-                setTimeout(() => {
-                    message.remove();
-                }, 5000);
-            }
-        }, 1000);
-    });
-}
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -275,6 +249,64 @@ console.log('%cEmail: premyathu@gmail.com', 'font-size: 12px; color: #64748b;');
 document.addEventListener('DOMContentLoaded', function() {
     // Skills animation will be triggered by scroll
     setTimeout(animateSkills, 1000);
+});
 
+// Mobile Navigation Menu Toggle - Fixed Version
+function initializeMobileMenu() {
+    const menuBtn = document.querySelector('.menu-btn');
+    const cancelBtn = document.querySelector('.cancel-btn');
+    const menu = document.querySelector('.menu');
+    const body = document.querySelector('body');
+    
+    console.log('Mobile menu elements:', { menuBtn, cancelBtn, menu }); // Debug log
+
+    if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            console.log('Menu button clicked'); // Debug log
+            menu.classList.add('active');
+            menuBtn.style.display = 'none';
+            body.style.overflow = 'hidden';
+        });
+    } else {
+        console.log('Menu button not found');
+    }
+
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', () => {
+            console.log('Cancel button clicked'); // Debug log
+            menu.classList.remove('active');
+            menuBtn.style.display = 'block';
+            body.style.overflow = 'auto';
+        });
+    } else {
+        console.log('Cancel button not found');
+    }
+
+    // Close menu when clicking on a link
+    const menuLinks = document.querySelectorAll('.menu a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active');
+            if (menuBtn) menuBtn.style.display = 'block';
+            body.style.overflow = 'auto';
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (menu.classList.contains('active') && 
+            !menu.contains(e.target) && 
+            !menuBtn.contains(e.target)) {
+            menu.classList.remove('active');
+            if (menuBtn) menuBtn.style.display = 'block';
+            body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeMobileMenu();
+    console.log('Mobile menu initialized'); // Debug log
 });
 
