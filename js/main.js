@@ -104,16 +104,15 @@ window.addEventListener('scroll', animateSkills);
 window.addEventListener('load', animateSkills);
 
 // Download CV Button
-const downloadBtn = document.getElementById('downloadCv');
-if (downloadBtn) {
-    downloadBtn.addEventListener('click', function() {
-        // Create a temporary link element
-        const link = document.createElement('a');
-        link.href = 'Premkumar Yathursan CV.pdf';
-        link.download = 'Premkumar Yathursan CV.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+// Simple CV Download with correct filename
+document.getElementById('downloadCv').addEventListener('click', function() {
+    const link = document.createElement('a');
+    link.href = 'Premkumar Yathursan CV.pdf'; // No underscores
+    link.download = 'Premkumar Yathursan CV.pdf'; // No underscores
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
         
         // Fallback message
         setTimeout(() => {
@@ -278,3 +277,4 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(animateSkills, 1000);
 
 });
+
