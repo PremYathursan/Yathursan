@@ -109,8 +109,8 @@ if (downloadBtn) {
     downloadBtn.addEventListener('click', function() {
         // Create a temporary link element
         const link = document.createElement('a');
-        link.href = 'Premkumar_Yathursan_CV.pdf';
-        link.download = 'Premkumar_Yathursan_CV.pdf';
+        link.href = 'Premkumar Yathursan CV.pdf';
+        link.download = 'Premkumar Yathursan CV.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -276,4 +276,5 @@ console.log('%cEmail: premyathu@gmail.com', 'font-size: 12px; color: #64748b;');
 document.addEventListener('DOMContentLoaded', function() {
     // Skills animation will be triggered by scroll
     setTimeout(animateSkills, 1000);
+
 });
