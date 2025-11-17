@@ -176,7 +176,7 @@ const portfolioData = {
                 'Customer review system',
                 'Automated email confirmations'
             ],
-            images: ['images/queen-1.png', 'images/queen-2.png', 'images/queen-3.png']
+            images: ['images/Queen-1.png', 'images/Queen-2.png', 'images/Queen-3.png']
         },
         {
             id: 'fhss-portal',
@@ -295,7 +295,7 @@ const portfolioData = {
                 'Technical indicators',
                 'Performance metrics'
             ],
-            images: ['images/rstock-1.png', 'images/rstock-2.png']
+            images: ['images/RStock-1.png', 'images/RStock-2.png']
         },
         {
             id: 'todo-app',
@@ -549,3 +549,4 @@ document.addEventListener('keydown', function(event) {
     }
 
 });
+
