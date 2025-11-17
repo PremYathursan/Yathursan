@@ -228,6 +228,108 @@ const portfolioData = {
                 'SEO optimized'
             ],
             images: ['images/dept-1.png', 'images/dept-2.png']
+        },
+        {
+            id: 'railway-dashboard',
+            title: 'Railway Data Analytics Dashboard',
+            icon: 'fas fa-train',
+            short_desc: 'Data analysis and visualization of railway operations using Power BI and R.',
+            full_desc: 'A comprehensive data analytics project analyzing railway operations to identify patterns and optimization opportunities. Includes interactive Power BI dashboards for passenger flow analysis, delay patterns, and revenue optimization. Statistical analysis in R provides predictive models for demand forecasting and resource allocation decisions.',
+            technologies: ['Power BI', 'R Language', 'Data Analysis', 'SQL', 'Statistics'],
+            features: [
+                'Interactive Power BI dashboards',
+                'Passenger flow analysis',
+                'Delay pattern identification',
+                'Revenue optimization insights',
+                'Predictive demand modeling',
+                'Performance metrics tracking'
+            ],
+            images: ['images/railway-1.png', 'images/railway-2.png', 'images/railway-3.png']
+        },
+        {
+            id: 'mobile-analysis',
+            title: 'Mobile Phone Sales Analysis',
+            icon: 'fas fa-mobile-alt',
+            short_desc: 'Data analysis of best-selling mobile phones with Power BI dashboards.',
+            full_desc: 'Comprehensive analysis of mobile phone market trends and sales data. The project includes interactive Power BI dashboards showing market share analysis, price-performance ratios, customer preferences, and sales patterns across different regions and time periods.',
+            technologies: ['Power BI', 'Data Analysis', 'Excel', 'Data Visualization'],
+            features: [
+                'Market share analysis',
+                'Price-performance comparison',
+                'Regional sales trends',
+                'Customer preference insights',
+                'Competitive analysis',
+                'Sales forecasting'
+            ],
+            images: ['images/powerbi-1.png']
+        },
+        {
+            id: 'tourism-app',
+            title: 'Tourism App UI/UX Design',
+            icon: 'fas fa-map-marked-alt',
+            short_desc: 'UI/UX design for tourism mobile application with focus on user experience.',
+            full_desc: 'Complete UI/UX design for a tourism mobile application featuring destination discovery, itinerary planning, booking integration, and local recommendations. The design focuses on intuitive navigation, visual appeal, and seamless user journey from discovery to booking.',
+            technologies: ['Figma', 'Adobe Photoshop', 'UI/UX Design', 'Prototyping'],
+            features: [
+                'Destination discovery',
+                'Itinerary planning',
+                'Booking integration',
+                'Local recommendations',
+                'Interactive maps',
+                'User reviews and ratings'
+            ],
+            images: ['images/toursim-1.png']
+        },
+        {
+            id: 'stock-prediction',
+            title: 'Stock Market Analysis Dashboard',
+            icon: 'fas fa-chart-line',
+            short_desc: 'Stock market data analysis and prediction models using R and data visualization.',
+            full_desc: 'Advanced stock market analysis project featuring predictive modeling, trend analysis, and interactive dashboards. Uses historical data to identify patterns and build prediction models for stock performance. Includes risk assessment and portfolio optimization features.',
+            technologies: ['R Language', 'Data Analysis', 'Statistics', 'Machine Learning'],
+            features: [
+                'Stock trend analysis',
+                'Predictive modeling',
+                'Risk assessment',
+                'Portfolio optimization',
+                'Technical indicators',
+                'Performance metrics'
+            ],
+            images: ['images/rstock-1.png', 'images/rstock-2.png']
+        },
+        {
+            id: 'todo-app',
+            title: 'To-Do List Application',
+            icon: 'fas fa-tasks',
+            short_desc: 'Interactive task management application with JavaScript and local storage.',
+            full_desc: 'A feature-rich to-do list application built with vanilla JavaScript. Includes task categorization, priority levels, due dates, and local storage persistence. The app features a clean, responsive interface with smooth animations and intuitive task management workflows.',
+            technologies: ['JavaScript', 'HTML5', 'CSS3', 'Local Storage'],
+            features: [
+                'Task categorization',
+                'Priority levels',
+                'Due date tracking',
+                'Local storage',
+                'Responsive design',
+                'Task filtering and search'
+            ],
+            images: ['images/todo-1.png']
+        },
+        {
+            id: 'ml-project',
+            title: 'Machine Learning Classification',
+            icon: 'fas fa-brain',
+            short_desc: 'Machine learning project for classification using various algorithms and data preprocessing.',
+            full_desc: 'Comprehensive machine learning project implementing multiple classification algorithms including Decision Trees, Random Forest, and SVM. Features extensive data preprocessing, feature engineering, model evaluation, and performance comparison across different algorithms with visualization of results.',
+            technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
+            features: [
+                'Multiple ML algorithms',
+                'Data preprocessing',
+                'Feature engineering',
+                'Model evaluation',
+                'Performance comparison',
+                'Result visualization'
+            ],
+            images: ['images/ml-1.png', 'images/ml-2.png', 'images/ml-3.png']
         }
     ]
 };
@@ -445,4 +547,5 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeProjectModal();
     }
+
 });
