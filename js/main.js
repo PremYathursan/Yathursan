@@ -310,3 +310,58 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Mobile menu initialized'); // Debug log
 });
 
+// Animate skill bars on scroll - Fixed version
+function animateSkills() {
+    const skillItems = document.querySelectorAll('.skill-item');
+    
+    skillItems.forEach(item => {
+        const percent = item.getAttribute('data-percent');
+        const skillLevel = item.querySelector('.skill-level');
+        const skillPercent = item.querySelector('.skill-percent');
+        const rect = item.getBoundingClientRect();
+        
+        // Check if element is in viewport
+        if (rect.top < window.innerHeight - 100 && rect.bottom > 0) {
+            // Animate the skill bar
+            setTimeout(() => {
+                if (skillLevel) {
+                    skillLevel.style.width = percent + '%';
+                    skillLevel.style.transition = 'width 1.5s ease-in-out';
+                }
+                if (skillPercent) {
+                    // Animate percentage counter
+                    animateCounter(skillPercent, 0, percent, 1500);
+                }
+            }, 200);
+            
+            // Mark as animated to prevent re-animation
+            item.setAttribute('data-animated', 'true');
+        }
+    });
+}
+
+// Animate percentage counter
+function animateCounter(element, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        element.textContent = value + '%';
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+// Initialize skills animation
+function initializeSkillsAnimation() {
+    animateSkills(); // Run once on load
+    window.addEventListener('scroll', animateSkills); // Run on scroll
+}
+
+// Call this when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initializeSkillsAnimation();
+});
