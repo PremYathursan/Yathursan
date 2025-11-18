@@ -206,4 +206,17 @@
 
 [data-theme="dark"] .back-btn:hover {
     background: #64748b;
+
+}
+
+[data-theme="dark"] .skill-bar {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .skill-level {
+    background: linear-gradient(90deg, #a78bfa, #8b5cf6);
+}
+
+[data-theme="dark"] .skill-percent {
+    color: #a78bfa;
 }
