@@ -406,8 +406,11 @@ function populateSkills() {
                     </div>
                     <div class="skill-details">
                         <span>${skill.name}</span>
-                        <div class="skill-bar">
-                            <div class="skill-level"></div>
+                        <div class="skill-info">
+                            <span class="skill-percent">${skill.percent}%</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 0%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -422,6 +425,9 @@ function populateSkills() {
             `;
             skillsGrid.appendChild(categoryDiv);
         }
+        
+        // Initialize skill animations after populating
+        setTimeout(animateSkills, 100);
     }
 }
 
@@ -547,6 +553,4 @@ document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeProjectModal();
     }
-
 });
-
