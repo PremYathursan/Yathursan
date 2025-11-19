@@ -206,9 +206,8 @@
 
 [data-theme="dark"] .back-btn:hover {
     background: #64748b;
-
 }
-
+/* Dark mode skill bars */
 [data-theme="dark"] .skill-bar {
     background: rgba(255, 255, 255, 0.1);
 }
@@ -219,4 +218,17 @@
 
 [data-theme="dark"] .skill-percent {
     color: #a78bfa;
+}
+ 
+/* Dark Mode Logo Color */
+[data-theme="dark"] .logo {
+    color: #a78bfa !important; /* Light purple for dark mode */
+}
+
+[data-theme="dark"] .logo a {
+    color: #a78bfa !important; /* Light purple for dark mode */
+}
+
+[data-theme="dark"] .logo a:hover {
+    color: #c4b5fd !important; /* Lighter purple on hover */
 }
