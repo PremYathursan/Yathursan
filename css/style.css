@@ -5,8 +5,8 @@
 }
 
 :root {
-    --primary: #4070f4;
-    --primary-dark: #3a67d8;
+    --primary: #0c2976;
+    --primary-dark: #abb4ca;
     --dark: #0f172a;
     --light: #f8fafc;
     --gray: #64748b;
@@ -146,7 +146,7 @@ nav {
 
 .media-icons a:hover {
     background: var(--primary);
-    color: white;
+    color: rgb(127, 123, 123);
     transform: translateY(-3px);
 }
 
@@ -173,11 +173,11 @@ nav {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, 
-        rgba(11, 70, 233, 0.1) 0%,
-        rgba(20, 161, 226, 0.1) 25%,
-        rgba(13, 36, 52, 0.82) 50%,
-        rgba(46, 204, 113, 0.1) 75%,
-        rgba(241, 196, 15, 0.1) 100%);
+        rgba(227, 229, 232, 0.1) 0%,
+        rgba(131, 179, 201, 0.1) 25%,
+        rgba(176, 208, 232, 0.82) 50%,
+        rgba(88, 87, 87, 0.1) 75%,
+        rgba(94, 94, 94, 0.1) 100%);
     top: 0;
     left: 0;
     z-index: 1;
@@ -242,7 +242,7 @@ nav {
     top: 20%;
     left: 10%;
     animation-delay: 3s;
-    background: linear-gradient(45deg, #34495e, #9b59b6);
+    background: linear-gradient(45deg, #3d5d7d, #9b59b6);
 }
 
 /* Floating particles */
@@ -412,11 +412,11 @@ nav {
 
 .btn-primary:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(64, 112, 244, 0.4);
+    color: white;
 }
 
 .btn-secondary {
-    background: transparent;
+    background: white;
     color: var(--primary);
     border: 2px solid var(--primary);
 }
@@ -439,8 +439,7 @@ nav {
     border-radius: 50%;
     overflow: hidden;
     border: 10px solid rgba(64, 112, 244, 0.3);
-    box-shadow: 0 20px 60px rgba(64, 112, 244, 0.3);
-    animation: float 6s ease-in-out infinite;
+    
 }
 
 .profile-images img {
@@ -1691,11 +1690,8 @@ input:checked + .slider:before {
         transform: translateX(0);
         opacity: 1;
     }
-
-    
 }
-
- /* Skills Section - Improved */
+    /* Skills Section - Improved */
     .skill-item {
         display: flex;
         align-items: center;
@@ -1774,7 +1770,6 @@ input:checked + .slider:before {
         width: 0%; /* Start at 0 */
         transition: width 1.5s ease-in-out;
     }
-
 
 
 
